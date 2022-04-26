@@ -9,18 +9,7 @@ export const Container = styled.form`
   box-sizing: border-box;
   border: 1px solid #dddddd;
   
-  form {
-   display: flex; 
-   flex-direction: column;
-   background: #F5F5F5;
-   max-width: 400px;
-   padding: 40px;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%);   
-
-  }
-
+  
   .form-login, .form-pw {
     display: flex; 
     flex-direction: row;
@@ -47,7 +36,7 @@ export const Container = styled.form`
   }
 
   form label[type=name-login],
-  form input[type=name-password] {
+  form label[type=name-password] {
     width: 100%;
     height: 100%;
     border: 1px solid #ccc;
@@ -60,8 +49,9 @@ export const Container = styled.form`
   form input[type=text],
   form input[type=password] {
     width:100%; 
-    height:25px;
+    height: 25px;
     padding: 0 5px;
+    padding-top: 5 7px;
   }
   
   form input[type=submit] {
