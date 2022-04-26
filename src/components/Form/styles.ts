@@ -11,9 +11,9 @@ export const Container = styled.form`
 
   form {
     background: #D3D3D3;
-    max-width: 300px;
-    width: 70%;
-    padding: 20px;
+    max-width: 350px;
+    width: 80%;
+    padding: 40px;
     position: absolute;
     left: 60%;
     top: 60%;
@@ -34,14 +34,13 @@ export const Container = styled.form`
     
   }
   
-  form input[type=button]{
+  form input[type=submit]{
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0 20px;
-    min-width: 50px;
     height: 29px;
-
+    height: center;
+    cursor: pointer;
+    
     border-radius: 25px;
     font-family: Poppins-Regular;
     font-size: 16px;
