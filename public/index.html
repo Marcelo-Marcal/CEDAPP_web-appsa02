@@ -13,9 +13,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <!-- Montserrat:wght@400;600&display=swap -->
+  
 </head>
 <body>
   <div id="root"></div>
+  <script>
+    var text = document.getElementById("Login");
 
+    text.addEventListener("focus",() =>{
+      text.style.borderColor = "#dddddd";
+    });
+    text.addEventListener("blur",() =>{
+      text.style.borderColor = "#ccc";
+    })
+
+  </script>
 </body>
 </html>
