@@ -1,45 +1,77 @@
 import styled from "styled-components";
 
 export const Container = styled.form`
-  background: #FFFFFF;
+  background: #f0f2f5;
   max-width: 1120px;
   margin: 0;
   padding: 2.5rem 1rem;
   padding: 0rem;
   box-sizing: border-box;
+  border: 1px solid #dddddd;
   
+  form {
+   display: flex; 
+   flex-direction: column;
+   background: #F5F5F5;
+   max-width: 400px;
+   padding: 40px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);   
+
+  }
+
+  .form-login, .form-pw {
+    display: flex; 
+    flex-direction: row;
+    margin: 10px 0 5px 10px;
+        
+  }
 
   form {
-    background: #D3D3D3;
-    max-width: 350px;
+    border: #dddddd;
+    background: #ffffff;
+    color: #333333;
+    max-width: 400px;
+    margin-top: 110px;
+    margin-left: -125px;
     width: 80%;
-    padding: 40px;
+    padding: 20px;
     position: absolute;
+    font-size: 1.1em;
     left: 60%;
     top: 60%;
     transform: translate(-50%, -50%);
+    
     /* justify-content: center; */
   }
 
-  form input[type=text],
-  form input[type=password] {
+  form label[type=name-login],
+  form input[type=name-password] {
     width: 100%;
     height: 100%;
     border: 1px solid #ccc;
     padding-left: 10px;
-    margin: 10px 0;
+    margin: 4px;
     display: flex;
     padding: 0.3rem;
-    justify-content: center;
-    
+  }
+
+  form input[type=text],
+  form input[type=password] {
+    width:100%; 
+    height:25px;
+    padding: 0 5px;
   }
   
-  form input[type=submit]{
+  form input[type=submit] {
     display: flex;
+    width: 90px;
     padding: 0 20px;
     height: 29px;
     height: center;
     cursor: pointer;
+    margin: 10px 0 5px 30px;
     
     border-radius: 25px;
     font-family: Poppins-Regular;
@@ -52,16 +84,13 @@ export const Container = styled.form`
     &:hover {
       filter: brightness(0.9);
     }
-  } 
+  }
   
-  /* p{
-  margin-bottom:15px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 0.5rem 0.5rem;
-  position: absolute;
-  left: 200px;
-  top: 400px;
-} */
+  .line {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0 5px;
+    background: #696969;
+  }
+  
 `;
