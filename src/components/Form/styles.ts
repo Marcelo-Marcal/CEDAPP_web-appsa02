@@ -65,25 +65,25 @@ export const Container = styled.div`
     &:hover {
       filter: brightness(0.9);
     }
-  }  
-
+  }
+  
   input[type="radio"] {
+    appearance: none;
     position: absolute;
     z-index: -1;
-    opacity: 0;
+    /* opacity: 0; */
     /* background-color: var(--green);
     border-color: solid #2E8B57;
     margin-left: 13px;
     cursor: pointer; */
-    /* opacity: 0; */
 
   }
   input[type="radio"] + label {
     position: relative;
     cursor: pointer;
-    padding-left: 30px
-    
+    padding-left: 30px    
   }  
+
   input[type="radio"] + label::before {
     content: "";
     position: absolute;
@@ -93,19 +93,24 @@ export const Container = styled.div`
     bottom: 0;
     border: solid 2px;
     vertical-align: bottom;
+    background: #2E8B57;
   }
 
-  input[type="radio"]:checked + label::after {
+  input[type="radio"]:checked + label:after {
     content: "";
     position: absolute;
     left: 10px;
     bottom: 10px;
     width: 10px;
     height: 20px;
-    border-right: solid 3px green;
-    border-bottom: solid 3px green;
-    transform: rotate(45deg);
-  }     
+    /* border-right: solid 3px green; */
+    /* border-bottom: solid 3px green; */
+
+  }
+  
+
+
+     
 
   .medical_access,
   .patient_access {
@@ -147,7 +152,7 @@ export const Container = styled.div`
 } */
 `;
 
-
+// export const RadioBox = styled.button
 
 
 // export const Container = styled.form`
