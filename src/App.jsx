@@ -1,14 +1,20 @@
 import { Form } from "./components/Form";
+import { Header } from "./components/Header";
 import { GlobalStyles } from "./styles/global";
+
+// import "./App.css";
 
 export function App() {
   return (
     <>
-      {/* <Header /> */}
-      <Form />
+      <div className="content">
+        <Header />
+        <Form />
+      </div>
+
       <GlobalStyles />
     </>
-  )
+  );
 }
 
 
