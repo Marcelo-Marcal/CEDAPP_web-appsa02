@@ -2,26 +2,28 @@
 import { Container } from "./styles";
 
 export function Form() {
+   
   return (
     <Container>      
      <form>
      <p>Faça seu login</p>
         <div className="medical_access">
-          <input type="radio" id="access1" name="radio" value="1"/>
+          <input className="radio1" type="radio" id="access1" name="radio" value="1" />
           <label htmlFor="medical"> Acesso médico </ label>
+          
         </ div>
         <div className="patient_access">
-          <input type="radio" id="access2" name="radio" value="2"/>
+          <input className="radio2" type="radio" id="access2" name="radio" value="2" />
           <label htmlFor="patient"> Acesso paciente </ label>
         </ div>
 
         <div className="login">
-          {/* <label htmlFor="input">Login:</label> */}
+          <label htmlFor="input"></label>
           <input type="text" name="Login" placeholder="CPF" />
         </div>
 
         <div className="pw">
-          {/* <label htmlFor="input">Senha:</label> */}
+          <label htmlFor="input"></label>
           <input type="password" name="Senha" placeholder="Data de nascimento" />{" "}
         </div>
 
