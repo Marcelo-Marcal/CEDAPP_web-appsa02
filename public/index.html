@@ -16,17 +16,21 @@
   
 </head>
 <body>
-  <div id="root"></div>
-  <script>
-    var text = document.getElementById("Login");
-
-    text.addEventListener("focus",() =>{
-      text.style.borderColor = "#dddddd";
-    });
-    text.addEventListener("blur",() =>{
-      text.style.borderColor = "#ccc";
-    })
-
-  </script>
+  <div id="root">
+    <script>
+      var text = document.getElementById("Login");
+      
+      text.addEventListener("focus",() =>{
+        text.style.borderColor = "#dddddd";
+      });
+      text.addEventListener("blur",() =>{
+        text.style.borderColor = "#ccc";
+      })
+      
+      data: {
+        checked: "";
+      }      
+    </script>
+  </div>
 </body>
 </html>

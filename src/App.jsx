@@ -11,6 +11,7 @@ export function App() {
         <Header />
         <LoginForm />
       </div>
+      
       <GlobalStyles />
 
     </>

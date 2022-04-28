@@ -2,9 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --background: #f0f2f5;
-    --green: #2E8B57;
+    --background: #f7f7f7;
+    --green: #007565;
     --white: #FFFFFF;
+    --caixaLogin: #f1f1f1;
     /* --text-title: #363f5f;
     --text-body: #969cb3; */
   }
@@ -22,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
   body {
-    background: var(--white);
+    background: var(--background);
     -webkit-font-smoothing: antialiased;
   }
   body, input, textarea, button {

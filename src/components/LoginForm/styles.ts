@@ -10,11 +10,11 @@ export const Container = styled.div`
   margin-top: -20px;
 
   form {
-    background: #f1f1f1;
+    background: var(--caixaLogin);
     border: 0.5px solid #f2f2f2;
     color: #333333;
     border-color: #BEBEBE;
-    width: 428px;
+    width: 410px;
     padding: 1px 30px 17px 25px;
     /* justify-content: center; */
     .login,
@@ -39,7 +39,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     text-align: 50px;
-    border: 2.5px solid #2E8B57;
+    border: 2.5px solid var(--green);
     border-radius: 5px;
     /* padding-left: 10px; */
     margin: 7px 15px;
@@ -51,16 +51,16 @@ export const Container = styled.div`
 
   form input[type="submit"] {
     display: flex;
-    padding: 0 149px;
+    padding: 0 138px;
     height: 40px;
     margin: 7px 15px;
     /* margin: 10px 155px; */
     height: center;
     cursor: pointer;
     border-radius: 5px;
-    font-family: Poppins-Regular;
+    font-family: Open Arial, Helvetica, sans-serif;    
     font-size: 16px;
-    color: #000000;
+    color: #FFFFFF;
     background: var(--green);
     line-height: 1.2;
     transition: filter 0.2s;
@@ -75,7 +75,7 @@ export const Container = styled.div`
     width: 24px;
     height: 24px;
     margin-left: 10px;
-    border: 3px solid #2E8B57;
+    border: 3px solid var(--green);
     border-radius: 3px;
     position: relative;
     display: flex;
@@ -88,11 +88,11 @@ export const Container = styled.div`
   input[type="radio"]::before {
     content: '';
     width: 100%;
-    height: 101%;
-    background: #2E8B57;
+    height: 100%;
+    background: var(--green);
     border-radius: 3;
     opacity: 0;
-    transition: all 400ms ease-in-out;
+    transition: all 300ms ease-in-out;
     position: absolute;
   }
 
@@ -101,7 +101,7 @@ export const Container = styled.div`
   }
 
   input[type="radio"]:focus {
-  box-shadow: 0 0 5px #2E8B57;
+  box-shadow: 0 0 5px var(--green);
 }
 
 
@@ -112,7 +112,7 @@ export const Container = styled.div`
     text-align: 50px;
     flex-direction: row;
     align-items: center;
-    margin: 5px 5px 10px;
+    margin: 4px 5px 9px;
 
     label{
       margin: 2px;

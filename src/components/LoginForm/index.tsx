@@ -11,7 +11,6 @@ export function LoginForm() {
           <input className="radio1" type="radio" id="access1" name="radio" value="CRM" v-model="checked" />
           <label className="medical" htmlFor="medical"> Acesso médico </ label>                  
         </ div>
-
         <div className="patient_access">
           <input className="radio2" type="radio" id="access2" name="radio" value="CPF" v-model="checked"/>
           <label className="patient" htmlFor="patient"> Acesso paciente </ label>
@@ -21,7 +20,6 @@ export function LoginForm() {
           <label htmlFor="input"></label>
           <input type="number" name="Login" placeholder="CPF" cpf-mask="000.000.000-00"/>
         </div>
-
         <div className="pw">
           <label htmlFor="input"></label>
           <input type="password" name="Senha" placeholder="Data de nascimento" date-mask="00/00/0000" />{" "}
