@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
   body {
-    background: #f0f2f5;
+    background: var(--white);
     -webkit-font-smoothing: antialiased;
   }
   body, input, textarea, button {

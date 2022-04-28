@@ -1,4 +1,4 @@
-import { Form } from "./components/Form";
+import { LoginForm } from "./components/LoginForm";
 import { Header } from "./components/Header";
 import { GlobalStyles } from "./styles/global";
 
@@ -9,10 +9,10 @@ export function App() {
     <>
       <div className="content">
         <Header />
-        <Form />
+        <LoginForm />
       </div>
-
       <GlobalStyles />
+
     </>
   );
 }
