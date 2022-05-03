@@ -14,9 +14,21 @@ export const Container = styled.div`
     border: 0.5px solid #f2f2f2;
     color: #333333;
     border-color: #BEBEBE;
-    width: 410px;
-    padding: 1px 30px 17px 25px;
+    width: 350px;
+    margin-right: -10px;
+    padding: 1px 30px 12px 25px;
     /* justify-content: center; */
+
+    p {
+      text-align: center;
+      margin: 10px 0px 8px;
+      font-size: 18px;
+      font-weight: bold;
+      height: 40px;
+      color: var(--green);
+        /* margin-left: 120px; */
+    }
+
     .login,
     .pw {
       display: flex;
@@ -26,7 +38,7 @@ export const Container = styled.div`
 
       input {
         max-width: 200px;
-      }
+      }      
     }
 
     input {
@@ -51,7 +63,7 @@ export const Container = styled.div`
 
   form input[type="submit"] {
     display: flex;
-    padding: 0 138px;
+    padding: 0 103px;
     height: 40px;
     margin: 7px 15px;
     /* margin: 10px 155px; */
@@ -59,7 +71,7 @@ export const Container = styled.div`
     cursor: pointer;
     border-radius: 5px;
     font-family: Open Arial, Helvetica, sans-serif;    
-    font-size: 16px;
+    font-size: 20px;
     color: #FFFFFF;
     background: var(--green);
     line-height: 1.2;
@@ -74,7 +86,7 @@ export const Container = styled.div`
     appearance: none;
     width: 24px;
     height: 24px;
-    margin-left: 10px;
+    margin-left: 12px;
     border: 3px solid var(--green);
     border-radius: 3px;
     position: relative;
@@ -104,29 +116,26 @@ export const Container = styled.div`
   box-shadow: 0 0 5px var(--green);
 }
 
-
-
   .medical_access,
   .patient_access {
     display: flex;
-    text-align: 50px;
     flex-direction: row;
     align-items: center;
     margin: 4px 5px 9px;
 
     label{
-      margin: 2px;
-      padding-top: 2px;
+      margin: 3px 12px;
+      padding-top: 3px;
     }
   }
 
   .line {
     width: 100%;
     height: 2px;
-    margin: 16px 0px 10px 0px;
+    margin: 16px 0px 10px -2px;
     background: #BEBEBE;
   }
-
+  
   p {
     margin: 10px 0px -12px 0px;
     font-size: 18px;

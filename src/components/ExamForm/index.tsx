@@ -3,10 +3,13 @@ import { Container } from "./styles";
 export function ExamForm() {
   return (
     <Container>
-      <form>
+      <form>s
         <div className="logo_header">
-          
-          
+          <p>Faça</p>
+          <div className="medical_access">
+            {/* <input className="radio1" type="radio" id="access1" name="radio" value="CRM" v-model="checked" />
+            <label className="medical" htmlFor="medical"> Acesso médico </ label>                   */}
+          </ div>          
         </ div>
         <div className="patient_access">
           
