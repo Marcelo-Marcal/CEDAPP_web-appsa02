@@ -1,5 +1,6 @@
-import { LoginForm } from "./components/LoginForm";
+import { LoginForm } from "./components/Form";
 import { Header } from "./components/Header";
+import { Container } from "./pages/dashboard";
 import { GlobalStyles } from "./styles/global";
 
 // import "./App.css";
@@ -11,6 +12,7 @@ export function App() {
         <Header />
         <LoginForm />
       </div>
+        <Container />
       
       <GlobalStyles />
 
