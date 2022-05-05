@@ -2,3 +2,7 @@
 CEDAPP – Centro de Diagnostico Anatomopatológico
 
 `yarn start`
+
+`yarn dev`
+
+
