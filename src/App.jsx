@@ -1,6 +1,7 @@
-import { LoginForm } from "./components/LoginForm";
+import { LoginForm } from "./pages/index";
 import { Header } from "./components/Header";
 import { GlobalStyles } from "./styles/global";
+// import { ContainerExam } from "./pages/dashboard";
 
 // import "./App.css";
 
@@ -11,7 +12,7 @@ export function App() {
         <Header />
         <LoginForm />
       </div>
-      
+      {/* <ContainerExam /> */}
       <GlobalStyles />
 
     </>
