@@ -3,25 +3,30 @@ import styled from "styled-components";
 export const ContainerExam = styled.div`
 
   .page_header {
+    color: #FFF;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    color: #4FF4F4F4;
-    text-align: center;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
 
-    background-color: #3f3f3f;
+    border-bottom: 1px solid #103D4A;
 
-    padding-top: 12.25rem;
-    padding-bottom: 2.5rem;
+    position: absolute;
 
   }
 
   .header_logo {
-
+    margin-bottom: 1rem;
   }
   .navigation_header {
-
+    text-align: center;
   }
 
 

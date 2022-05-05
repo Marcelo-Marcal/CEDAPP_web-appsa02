@@ -1,13 +1,22 @@
 import { useState } from "react";
-import { ContainerForm } from "../styles/styleForm";
+import { Container } from "../styles/styleForm";
+import { mask } from "../../src/util/format";
 
-export function LoginForm(): JSX.Element {
+export function LoginForm() {
    
   const [valuePlaceHolder1, setValuePlaceHolder1] = useState<string>('CRM');
   const [valuePlaceHolder2, setValuePlaceHolder2] = useState<string>('CPF');
 
+  const [valor, setValor] = useState('')
+
+  function handleChangeMask(event: any) {
+    const { value } = event.target
+
+    setValor(mask(value))
+} 
+
   return (
-    <ContainerForm>      
+    <Container>      
      <form>
         <p>Faça seu login</p>
         <div className="medical_access">
@@ -31,17 +40,17 @@ export function LoginForm(): JSX.Element {
 
         <div className="login">
           <label htmlFor="input"></label>
-          <input type="number" name="Login" placeholder={valuePlaceHolder1} cpf-mask="000.000.000-00"/>
+          <input type="number" name="Login" placeholder={valuePlaceHolder1} onChange={handleChangeMask} value={valor}/>
         </div>
         <div className="pw">
           <label htmlFor="input"></label>
-          <input type="password" name="Senha" placeholder={valuePlaceHolder2} date-mask="00/00/0000" />{" "}
+          <input type="password" name="Senha" placeholder={valuePlaceHolder2} />{" "}
         </div>
 
         <input type="submit" name="ação" value="Entrar" />
 
         <div className="line" ></div>
       </form>
-    </ContainerForm>
+    </Container>
   );
 }

@@ -1,6 +1,6 @@
 import { ContainerExam } from "../styles/styleExam";
 
-export function Container(): JSX.Element {
+export function Container() {
 
   return (
     <>
