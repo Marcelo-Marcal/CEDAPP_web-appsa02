@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Container } from "../styles/styleForm";
-import { mask } from "../../src/util/format";
+import { Container } from "./styles";
+import { mask } from "../../util/format";
 
-export function LoginForm() {
+export function Login() {
    
   const [valuePlaceHolder1, setValuePlaceHolder1] = useState<string>('CRM');
   const [valuePlaceHolder2, setValuePlaceHolder2] = useState<string>('CPF');
