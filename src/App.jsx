@@ -1,5 +1,4 @@
-import { LoginForm } from "./pages/index";
-import { Header } from "./components/Header";
+import Routes from "./routes";
 import { GlobalStyles } from "./styles/global";
 // import { ContainerExam } from "./pages/dashboard";
 
@@ -7,14 +6,9 @@ import { GlobalStyles } from "./styles/global";
 
 export function App() {
   return (
-    <>
-      <div className="content">
-        <Header />
-        <LoginForm />
-      </div>
-      {/* <ContainerExam /> */}
+    <>      
       <GlobalStyles />
-
+      <Routes />
     </>
   );
 }
