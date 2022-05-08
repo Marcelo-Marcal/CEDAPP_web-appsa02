@@ -6,51 +6,63 @@ export function ListExams() {
   return (
     <>
       <ContainerExam>
-        <div className="container">
+        <div id="container">
           <div className="contenteLint01">
-            <div className="header01">
-              <body>
-                <header
-                  className="page_header"
-                >
-                  <div className="header_logo">
-                    <img
-                      className="logo02"
-                      src={logo02}
-                      alt="Logo do cabeçalho"
-                    />
-                  </div>
+            <header
+              id="page_header"
+            >
+              <div id="header_logo">
+                <img
+                  id="logo02"
+                  src={logo02}
+                  alt="Logo do cabeçalho"
+                />
+              </div>
 
-                  <div className="text">
-                    <h1>SisLab - Sistema de Gerenciamento Laboratorial</h1>
-                    <h1>CEDAPP – Centro de Diagnostico Anatomopatológico</h1>
-                  </div>
+              <div id="text">
+                <strong>
+                  SisLab - Sistema de Gerenciamento Laboratorial <br />
+                  CEDAPP – Centro de Diagnostico Anatomopatológico
+                </strong>
+              </div>
 
-                  <nav className="navigation_header">
-                    <ul>
-                    </ul>
-                  </nav>
-                </header>
-              </body>
-            </div>
+              <nav className="navigation_header">
+                <ul>
+                </ul>
+              </nav>
+            </header>
           </div>
-          <div className="line" ></div>
-          <div className="contenteLint01">
-            <div className="header01">
-              <main>
-                <div className="hist">
-                  <div className="text_hist01">
-                    <h1>Exames Realizados</h1>
-                    <p></p>
-                    {/* <a href=""></a> */}
-                  </div>
-                </div>
-              </main>
+
+          <div id="line" ></div>
+
+          <div id="contenteLint02">
+
+            <div id="hist">
+              <div id="text_hist01">
+                Exames Realizados
+                <p></p>
+                {/* <a href=""></a> */}
+              </div>
             </div>
+            
+            <div id="divbuttonconsulta">
+              <div>
+                <button>
+                  Consultar
+                </button>             
+              </div> 
+            </div>
+
+            <div id="text_hist02">
+              <div className= "text02">
+                Exame(s)
+              </div>
+            </div>
+
+
           </div>
         </div>
       </ContainerExam>
-      );
     </>
   )
 }
