@@ -198,6 +198,25 @@ export const ContainerExam = styled.div`
     border-radius: 2px;
   }
 
+  #button01 {
+    width: 5%;
+    height: 8;
+    align-items: center;
+    justify-content: center;
+  }
 
+  #numberPgE {
+    width: 140px;
+    height: 19px;
+    font-size: 2px;
+  }
+  
+  .PgE {
+    max-width: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 10px;
+    height: 20px;
+  }
 
 `;

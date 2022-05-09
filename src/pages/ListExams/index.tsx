@@ -1,5 +1,10 @@
 import { ContainerExam } from "./styles";
 import logo02 from "../../assets/logo02.png";
+import um from "../../icon/um.png";
+import dois from "../../icon/dois.png";
+import quatro from "../../icon/quatro.png";
+import cinco from "../../icon/cinco.png";
+
 
 export function ListExams() {
 
@@ -26,7 +31,6 @@ export function ListExams() {
                 </div>
 
               </div>
-
 
               <nav className="navigation_header">
                 <ul>
@@ -60,7 +64,54 @@ export function ListExams() {
                 </div>
               
                 <div className="text03">
-                  <input></input>
+                  
+                  <button type="button" id="button01">
+                    <img
+                      id="um"
+                      src={um}
+                      alt="icon1"
+                      height="15"
+                      width="25"
+                    />
+                  </button>
+                  <button type="button" id="button01">
+                    <img
+                      id="dois"
+                      src={dois}
+                      alt="icon2"
+                      height="15"
+                      width="25"
+                    />
+                  </button>
+
+                  <div id="numberPgE">
+                    <input
+                      type="number"
+                      name="number"
+                    >
+                    </input>
+                  </div>
+
+                  <button type="button" id="button01">
+                    <img
+                      id="quatro"
+                      src={quatro}
+                      alt="icon4"
+                      height="15"
+                      width="25"
+                    />
+                  </button>
+                  <button type="button" id="button01">
+                    <img
+                      id="cinco"
+                      src={cinco}
+                      alt="icon5"
+                      height="15"
+                      width="25"
+                    />
+                  </button>
+
+
                 </div>
 
               </div>
