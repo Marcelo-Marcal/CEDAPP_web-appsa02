@@ -3,36 +3,35 @@ import styled from "styled-components";
 export const ContainerExam = styled.div`
 
   #container {
-    background: #3399ff;
-    max-width: 1080px;
+    background: #ffffff;
+    max-width: 100%;
     margin-top: -10px;
-    height: 780px;
+    height: 100%;
 
   }
-
-  .contenteLint01 {
+  
+  .containerLint01 {
     /* background: #f1f1f1; */
     background: #ebebe0;
     max-width: 90%;
     margin: auto;
     /* background: #e0e0d1; */
-    height: 140px;
+    height: 100%;
     border-radius: 2px;
+    padding: 16px;  
   }
-  
+
   #page_header {
-    width: 55%;
+    width: 50%;
     max-width: 90%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 
-    font-size: 60%;
+    font-size: 100%;
     margin-top: 0px;
+    border-radius: 2px;
     /* position: absolute; */
-
-
-    /* padding-bottom: .75rem; */
 
   }
 
@@ -42,105 +41,161 @@ export const ContainerExam = styled.div`
 
   #logo02 {
     /* margin-bottom: 1px; */
-    width: 35%;
+    width: 40%;
     margin-left: 5px;
     display: flex;
     margin-top: 0px;
+    /* background-image: ; */
   }
 
   #text {
-    margin-left: 15px;
-    align-items: -55px;
-    margin-right: -55%;
-    margin-top: 20px;
-    font-size: 130%;
+    margin-left: 8px;
+    align-items: -50px;
+    margin-right: -50%;
+    margin-top: 15px;
+    font-size: 120%;
     color: gray;
-    font-weight: bold;    
+    border-radius: 2px;
 
   } 
 
   .navigation_header {
-    text-align: center;
+    /* text-align: center; */
   }
 
   #line {    
-    margin-top: 10px;
+    margin-top: 8px;
     width: 90%;
-    height: 1.5px;
+    height: 3px;
     margin-left: 5%;
-    background: #BEBEBE;
+    background: #ebebe0;
   }
 
-
-  
-
-  #contenteLint02 {
-    background: #3399;
+  #containerLint02 {
+    background: #ebebe0;
     max-width: 90%;
     margin: auto;
-    margin-top: 0px;
-    height: 600px;
     margin-top: 8px;
     border-radius: 2px;
     padding: 3.5px;
+    display: flex;
   }
 
   #hist {
-    background: #3399ff;
-    max-width: 96%;
+    background: #ffffff;
+    width: 98%;
     margin: auto;
     display: flex;
     height: 575px;
     margin-top: 8px;
     border-radius: 2px;
-    color: gray;
-  }
-
-
-
+    display: inline-block;
+    /* color: gray; */
+  }    
+  
   #text_hist01 {
-    /* display: flex; */
-    width: 96.6%;
-    margin: 0 auto;
-    height: 22px;
+    background: #ebebe0;
+    /* border: 1px solid #ff0000; */
+    width: 99%;
+    padding: 0.5%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 25px;
     font-size: 90%;
-    font-size: 12px;
-    margin-top: 8px;
+    margin-top: 5px;
+    margin-left: 0.5%;
+    float: left;
 
-    font-weight: bold;
     color: black;
-    background: gray;
+    font-weight: bold;
   }
 
   #divbuttonconsulta {
-    background: green;
-    width: 93%;
-    margin-left: 20px;
+    background: #ffffff;
+    width: 96%;
     display: flex;
-    margin-top: -537px;
-    height: 30px;
-    font-size: 90%;
-    border-color: gray;
+    align-items: center;
+    padding: 2px;
+    margin-top: 45px;
+    margin-left: 2%;
+    border-top: 3px solid #ebebe0;
+    border-bottom: 3px solid #ebebe0;
+    /* max-width: 90%; */
+    /* float: left;    */
+
+    height: 55px;
 
   }
 
-  #text_hist02 {
-    background: white;
-    width: 93%;
-    height: 490px;
-    margin: auto;
-    margin-top: 8px;
-
+  .buttonConsultar {
+    margin-left: 2px;
+    border-radius: 2px;
+    border-color: #ebebe0;
+    padding: 4px 10px 4px 10px; 
     
   }
 
-  .text02 {
-    font-size: 12px;
-    text-align: center;
+  #text_hist02 {
+    background: #ffffff;
+    width: 96%;
     display: flex;
-    margin: center;
+    flex-direction: column;
+    /* width: 750px; */
+    height: 490px;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-left: 2%;
+    border-radius: 2px;
+  }
+  
+  .text02 {
+    background: #6699ff;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    align-items: center;
+    height: 55px;
+    text-align: center;
+    /* margin-left: 40%; */
+    font-size: 15px;
+    color: white;
+    position: relative;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
 
+  #text_hist03 {
+    width: 96%;
+    display: flex;
+    
+
+    /* height: 9px; */
+    margin: 0 auto;
+    margin-left: 2%;
+    border-radius: 2px;
+  }
+
+  .text03 {
+    background: #9999ff;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+
+    align-items: center;
+    height: 50px;
+    text-align: center;
+    /* margin-left: 40%; */
+    font-size: 15px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
   }
 
 

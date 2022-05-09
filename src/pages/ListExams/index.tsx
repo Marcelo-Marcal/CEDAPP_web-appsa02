@@ -7,7 +7,7 @@ export function ListExams() {
     <>
       <ContainerExam>
         <div id="container">
-          <div className="contenteLint01">
+          <div className="containerLint01">
             <header
               id="page_header"
             >
@@ -17,14 +17,16 @@ export function ListExams() {
                   src={logo02}
                   alt="Logo do cabeçalho"
                 />
+
+                <div id="text">
+                  <strong>
+                    SisLab - Sistema de Gerenciamento Laboratorial <br />
+                    CEDAPP – Centro de Diagnostico Anatomopatológico
+                  </strong>
+                </div>
+
               </div>
 
-              <div id="text">
-                <strong>
-                  SisLab - Sistema de Gerenciamento Laboratorial <br />
-                  CEDAPP – Centro de Diagnostico Anatomopatológico
-                </strong>
-              </div>
 
               <nav className="navigation_header">
                 <ul>
@@ -35,30 +37,38 @@ export function ListExams() {
 
           <div id="line" ></div>
 
-          <div id="contenteLint02">
+          <div id="containerLint02">
 
             <div id="hist">
+
               <div id="text_hist01">
-                Exames Realizados
-                <p></p>
-                {/* <a href=""></a> */}
+                <div>
+                  Exames Realizados
+                </div>
               </div>
-            </div>
-            
-            <div id="divbuttonconsulta">
-              <div>
-                <button>
+
+              <div id="divbuttonconsulta">
+                <button className="buttonConsultar">
                   Consultar
-                </button>             
-              </div> 
-            </div>
-
-            <div id="text_hist02">
-              <div className= "text02">
-                Exame(s)
+                  {/* <a href=""></a> */}
+                </button>
               </div>
-            </div>
 
+              <div id="text_hist02">
+                <div className="text02">
+                  Exame(s)
+                </div>
+              
+                <div className="text03">
+                  <input></input>
+                </div>
+
+              </div>
+
+              
+              
+
+            </div>
 
           </div>
         </div>
