@@ -103,7 +103,7 @@ export const ContainerExam = styled.div`
     margin: auto;
     height: 25px;
     font-size: 90%;
-    margin-top: 5px;
+    margin-top: 2px;
     margin-left: 0.5%;
     float: left;
 
@@ -116,15 +116,13 @@ export const ContainerExam = styled.div`
     width: 96%;
     display: flex;
     align-items: center;
-    padding: 2px;
-    margin-top: 45px;
+    padding: 1px;
+    margin-top: 40px;
     margin-left: 2%;
     border-top: 3px solid #ebebe0;
-    border-bottom: 3px solid #ebebe0;
-    /* max-width: 90%; */
-    /* float: left;    */
+    border-bottom: 3px solid #ebebe0;   
 
-    height: 55px;
+    height: 48px;
 
   }
 
@@ -133,6 +131,7 @@ export const ContainerExam = styled.div`
     border-radius: 2px;
     border-color: #ebebe0;
     padding: 4px 10px 4px 10px; 
+    font-weight: bold;
     
   }
 
@@ -144,7 +143,7 @@ export const ContainerExam = styled.div`
     /* width: 750px; */
     height: 490px;
     margin: 0 auto;
-    margin-top: 8px;
+    margin-top: 5px;
     margin-left: 2%;
     border-radius: 2px;
   }
@@ -153,7 +152,7 @@ export const ContainerExam = styled.div`
     background: #6699ff;
     width: 100%;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 1px;
     align-items: center;
     height: 55px;
     text-align: center;
@@ -166,6 +165,7 @@ export const ContainerExam = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 2px;
+    font-weight: bold;
   }
 
   #text_hist03 {
@@ -186,7 +186,7 @@ export const ContainerExam = styled.div`
     top: 0;
 
     align-items: center;
-    height: 50px;
+    height: 30px;
     text-align: center;
     /* margin-left: 40%; */
     font-size: 15px;
@@ -198,6 +198,120 @@ export const ContainerExam = styled.div`
     border-radius: 2px;
   }
 
+  #button01 {
+    width: 5%;
+    height: 8;
+    align-items: center;
+    justify-content: center;
+  }
 
+  #numberPgE {
+    width: 20px;
+    height: 20px;
+    font-size: 1px;
+  }
+  
+  .PgE {
+    max-width: 45px;
+    /* margin-left: 0px; */
+    /* margin-right: 0px; */
+    width: 30px;
+    height: 20px;
+  }
 
+  .caixaEx {
+    /* flex-direction: column; */
+    float: left;
+    font-size: 70%;
+    font-weight: bold;
+
+  }
+  
+  #caix1 {
+    border: 1px solid grey;
+    width: 14.27%;
+    height: 65px;
+    float: left;
+    text-align: center;    
+    input {
+      width: 80%;
+      margin: 10%;      
+      position: relative;
+    }
+  }
+  #caix2 {
+    border: 1px solid grey;
+    width: 14.27%;
+    height: 65px;
+    float: left;
+    text-align: center;
+    input {
+      width: 80%; 
+      margin: 10%;     
+      position: relative;
+    }
+  }
+  #caix3 {
+    border: 1px solid grey;
+    width: 14.27%;
+    height: 65px;
+    float: left;
+    text-align: center;
+    input {
+      width: 80%;
+      margin: 10%;      
+      position: relative;
+    }
+  }
+  #caix4 {
+    border: 1px solid grey;
+    width: 14.27%;
+    height: 65px;
+    float: left;
+    text-align: center;
+    input {
+      width: 80%;
+      margin: 10%;      
+      position: relative;
+    }
+  }
+  #caix5 {
+    border: 1px solid grey;
+    width: 14.27%;
+    height: 65px;
+    float: left;
+    text-align: center;
+    input {
+      width: 80%;  
+      margin: 10%;    
+      position: relative;
+    }
+  }
+  #caix6 {
+    border: 1px solid grey;
+    width: 14.27%;
+    height: 65px;
+    float: left;
+    text-align: center;
+    input {
+      width: 80%;
+      margin: 10%;      
+      position: relative;
+    }
+  }
+
+  #caix7 {
+    border: 1px solid grey;
+    width: 14.27%;
+    height: 65px;
+    float: left;
+    text-align: center;
+    input {
+      width: 80%;
+      margin: 10%;      
+      position: relative;
+    }
+  }
+
+ 
 `;
