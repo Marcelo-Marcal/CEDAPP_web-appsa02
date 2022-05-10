@@ -70,7 +70,7 @@ export function ListExams() {
                       id="um"
                       src={um}
                       alt="icon1"
-                      height="15"
+                      height="11"
                       width="25"
                     />
                   </button>
@@ -79,13 +79,13 @@ export function ListExams() {
                       id="dois"
                       src={dois}
                       alt="icon2"
-                      height="15"
+                      height="11"
                       width="25"
                     />
                   </button>
 
                   <div id="numberPgE">
-                    <input
+                    <input className="PgE"
                       type="number"
                       name="number"
                     >
@@ -97,7 +97,7 @@ export function ListExams() {
                       id="quatro"
                       src={quatro}
                       alt="icon4"
-                      height="15"
+                      height="11"
                       width="25"
                     />
                   </button>
@@ -106,13 +106,51 @@ export function ListExams() {
                       id="cinco"
                       src={cinco}
                       alt="icon5"
-                      height="15"
+                      height="11"
                       width="25"
                     />
                   </button>
 
-
                 </div>
+                
+                <div className="caixaEx">
+                  <div id="caix1">
+                    Código
+                    <input type="text" name="text">
+                    </input>
+                  </div>
+                  <div id="caix2">
+                    Cod.Atendimento
+                    <input type="text" name="text">
+                    </input>
+                  </div>
+                  <div id="caix3">
+                    Código Laudo
+                    <input type="text" name="text">
+                    </input>
+                  </div>
+                  <div id="caix4">
+                    Código Pedido
+                    <input type="text" name="text">
+                    </input>
+                  </div>
+                  <div id="caix5">
+                    Código Laudo
+                    <input type="text" name="text">
+                    </input>
+                  </div>
+                  <div id="caix6">
+                    Exame
+                    <input type="text" name="text">
+                    </input>
+                  </div>
+                  <div id="caix7">
+                    PDF
+                    <input type="text" name="text">
+                    </input>
+                  </div>
+                </div>
+                
 
               </div>
 
