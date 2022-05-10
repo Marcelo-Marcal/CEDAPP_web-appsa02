@@ -11,49 +11,49 @@ export const ContainerExam = styled.div`
   }
   
   .containerLint01 {
-    /* background: #f1f1f1; */
-    background: #ebebe0;
+    background: #f1f1f1;
     max-width: 90%;
     margin: auto;
-    /* background: #e0e0d1; */
     height: 100%;
     border-radius: 2px;
     padding: 16px;  
+
+    #page_header {
+      width: 75%;
+      max-width: 80%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+  
+      /* font-size: 100%; */
+      margin-top: 0px;
+      border-radius: 2px;
+    }
   }
 
-  #page_header {
-    width: 50%;
-    max-width: 90%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-
-    font-size: 100%;
-    margin-top: 0px;
-    border-radius: 2px;
-    /* position: absolute; */
-
-  }
 
   #header_logo {
-    margin-bottom: 1px;
+    width: 60%;
   }
 
   #logo02 {
     /* margin-bottom: 1px; */
-    width: 40%;
-    margin-left: 5px;
+    width: 70%;
+    margin-left: -2px;
     display: flex;
-    margin-top: 0px;
-    /* background-image: ; */
+    margin-top: 1px;
+    
   }
 
   #text {
-    margin-left: 8px;
+    max-width: 80%;
+    width: 80%;
+    height: 80%;
+    margin-left: -0.2%;
     align-items: -50px;
-    margin-right: -50%;
+    /* margin-right: -50%; */
     margin-top: 15px;
-    font-size: 120%;
+    font-size: 100%;
     color: gray;
     border-radius: 2px;
 
@@ -68,11 +68,12 @@ export const ContainerExam = styled.div`
     width: 90%;
     height: 3px;
     margin-left: 5%;
-    background: #ebebe0;
+    background: #f1f1f1;
   }
 
   #containerLint02 {
-    background: #ebebe0;
+    background: #f1f1f1;
+    border: 1px solid #e6e6e6;
     max-width: 90%;
     margin: auto;
     margin-top: 8px;
@@ -83,32 +84,64 @@ export const ContainerExam = styled.div`
 
   #hist {
     background: #ffffff;
+    border: 1px solid #e6e6e6;
     width: 98%;
     margin: auto;
     display: flex;
     height: 575px;
     margin-top: 8px;
-    border-radius: 2px;
+    border-radius: 3px;
     display: inline-block;
     /* color: gray; */
   }    
   
   #text_hist01 {
-    background: #ebebe0;
     /* border: 1px solid #ff0000; */
+    background: var(--green);
+    border: 1px solid #e6e6e6;
     width: 99%;
     padding: 0.5%;
     display: flex;
     align-items: center;
     margin: auto;
-    height: 25px;
-    font-size: 90%;
-    margin-top: 2px;
+    height: 80px;
+    font-size: 150%;
+    margin-top: 4px;
     margin-left: 0.5%;
     float: left;
-
-    color: black;
+    border-radius: 3px;
+    color: #009985;
     font-weight: bold;
+
+  }
+  .buttonPower {
+    background: var(--green);
+    border-color: var(--green);
+    border: none;
+    width: 25px;
+    height: 25px;
+    margin-left: 70%;
+    position: absolute;
+    display: flex;
+    
+    #power {
+      display: flex;
+      width: 25px;
+      height: 25px;
+      background: var(--green);
+    }
+  }
+
+  .inputFilter {
+    width: 40%;
+    height: 40px;
+    text-align: 50px;
+    border: 2.5px solid var(--green);
+    border-radius: 5px;
+    margin: 7px 15px;
+    margin-left: 1px;
+    display: flex;
+    padding: 9px;
   }
 
   #divbuttonconsulta {
@@ -119,19 +152,31 @@ export const ContainerExam = styled.div`
     padding: 1px;
     margin-top: 40px;
     margin-left: 2%;
-    border-top: 3px solid #ebebe0;
-    border-bottom: 3px solid #ebebe0;   
+    border-top: 3px solid #f1f1f1;
+    border-bottom: 3px solid #f1f1f1;   
 
-    height: 48px;
+    height: 70px;
 
   }
 
   .buttonConsultar {
-    margin-left: 2px;
-    border-radius: 2px;
-    border-color: #ebebe0;
+    background: var(--green);
+    width: 40px;
+    height: 40px;
+    margin-left: -10px;
+    border-radius: 5px;
+    border-color: #f1f1f1;
+    border: 1px solid #e6e6e6;
     padding: 4px 10px 4px 10px; 
     font-weight: bold;
+    
+    #pesquisa{
+      width: 25px;
+      height: 25px;
+      margin-top: 3px;
+      margin-left: -2px;
+
+    }
     
   }
 
@@ -149,7 +194,9 @@ export const ContainerExam = styled.div`
   }
   
   .text02 {
-    background: #6699ff;
+    /* background: #6699ff; */
+    background: #f1f1f1;
+    border: 1px solid #e6e6e6;
     width: 100%;
     margin: 0 auto;
     margin-top: 1px;
@@ -158,160 +205,100 @@ export const ContainerExam = styled.div`
     text-align: center;
     /* margin-left: 40%; */
     font-size: 15px;
-    color: white;
+    color: black;
     position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 2px;
+    border-radius: 5px;
     font-weight: bold;
   }
 
   #text_hist03 {
     width: 96%;
     display: flex;
-    
-
-    /* height: 9px; */
     margin: 0 auto;
     margin-left: 2%;
     border-radius: 2px;
   }
 
-  .text03 {
-    background: #9999ff;
+  .examList {
+    background: #f1f1f1;
+    /* border: 1px solid #e6e6e6; */
+    border: 1px solid #ff0000;
     width: 100%;
     margin: 0 auto;
     top: 0;
-
     align-items: center;
-    height: 30px;
+    height: 30%;
+    margin-top: 10px;
     text-align: center;
-    /* margin-left: 40%; */
-    font-size: 15px;
-    color: white;
+    color: gray;
+    font-size: 19px;
+    
+    display: flex;    
+    border-radius: 5px;
+    
+    #examData {
+      border: 1px solid #ff0000;
+      width: 70%;
+      height: 80%;
+      margin-left: 12px;
+      font-size: 80%;
+      color: gray;
+      text-align: left;
+      font-weight: bold;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-  }
+      .patientName {
+        font-size: 120%;
+        color: var(--green);
+        font-weight: bold;
+      }
+    }
+    #PDF {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      margin-left: 10%;
+      display: flex;
+      /* position: absolute; */
+      /* max-width: 10%; */
+      
+      .buttonPDF {
+        float:right;
+        max-width: 20%;
+        border: 1px solid #ff0000;
+        width: 80px;
+        height: 80px;
+        margin-top: 0px;
+        position: absolute;
+        /* position: relative; */
+        display: flex;
 
-  #button01 {
-    width: 5%;
-    height: 8;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #numberPgE {
-    width: 20px;
-    height: 20px;
-    font-size: 1px;
+        #pdf_icon {
+          width: 99%;
+          height: 99%;
+          margin-top: 1px;
+          margin-left: -5px;
+        }
+      }
+    }
   }
   
   .PgE {
-    max-width: 45px;
+    border: 1px solid #d9d9d9;
+    max-width: 30px;
     /* margin-left: 0px; */
     /* margin-right: 0px; */
-    width: 30px;
-    height: 20px;
+    width: 20px;
+    height: 18px;
   }
 
   .caixaEx {
-    /* flex-direction: column; */
     float: left;
     font-size: 70%;
     font-weight: bold;
 
-  }
-  
-  #caix1 {
-    border: 1px solid grey;
-    width: 14.27%;
-    height: 65px;
-    float: left;
-    text-align: center;    
-    input {
-      width: 80%;
-      margin: 10%;      
-      position: relative;
-    }
-  }
-  #caix2 {
-    border: 1px solid grey;
-    width: 14.27%;
-    height: 65px;
-    float: left;
-    text-align: center;
-    input {
-      width: 80%; 
-      margin: 10%;     
-      position: relative;
-    }
-  }
-  #caix3 {
-    border: 1px solid grey;
-    width: 14.27%;
-    height: 65px;
-    float: left;
-    text-align: center;
-    input {
-      width: 80%;
-      margin: 10%;      
-      position: relative;
-    }
-  }
-  #caix4 {
-    border: 1px solid grey;
-    width: 14.27%;
-    height: 65px;
-    float: left;
-    text-align: center;
-    input {
-      width: 80%;
-      margin: 10%;      
-      position: relative;
-    }
-  }
-  #caix5 {
-    border: 1px solid grey;
-    width: 14.27%;
-    height: 65px;
-    float: left;
-    text-align: center;
-    input {
-      width: 80%;  
-      margin: 10%;    
-      position: relative;
-    }
-  }
-  #caix6 {
-    border: 1px solid grey;
-    width: 14.27%;
-    height: 65px;
-    float: left;
-    text-align: center;
-    input {
-      width: 80%;
-      margin: 10%;      
-      position: relative;
-    }
-  }
-
-  #caix7 {
-    border: 1px solid grey;
-    width: 14.27%;
-    height: 65px;
-    float: left;
-    text-align: center;
-    input {
-      width: 80%;
-      margin: 10%;      
-      position: relative;
-    }
-  }
-
- 
+  } 
 `;
