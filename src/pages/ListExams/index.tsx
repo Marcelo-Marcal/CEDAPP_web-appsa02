@@ -1,10 +1,8 @@
 import { ContainerExam } from "./styles";
-import logo02 from "../../assets/logo02.png";
-import um from "../../icon/um.png";
-import dois from "../../icon/dois.png";
-import quatro from "../../icon/quatro.png";
-import cinco from "../../icon/cinco.png";
-
+import logo03 from "../../assets/logo03.png";
+import pesquisa from "../../icon/pesquisa.png";
+import power from "../../icon/power.png";
+import pdf from "../../icon/pdf_icon.png";
 
 export function ListExams() {
 
@@ -13,30 +11,31 @@ export function ListExams() {
       <ContainerExam>
         <div id="container">
           <div className="containerLint01">
+
             <header
               id="page_header"
             >
               <div id="header_logo">
                 <img
                   id="logo02"
-                  src={logo02}
+                  src={logo03}
                   alt="Logo do cabeçalho"
                 />
-
-                <div id="text">
-                  <strong>
-                    SisLab - Sistema de Gerenciamento Laboratorial <br />
-                    CEDAPP – Centro de Diagnostico Anatomopatológico
-                  </strong>
-                </div>
-
-              </div>
+              </div>                
 
               <nav className="navigation_header">
                 <ul>
                 </ul>
               </nav>
             </header>
+
+            <div id="text">
+              <strong>
+                SisLab - Sistema de Gerenciamento Laboratorial <br />
+                CEDAPP - Centro de Diagnostico Anatomopatológico
+              </strong>
+            </div>
+            
           </div>
 
           <div id="line" ></div>
@@ -47,13 +46,25 @@ export function ListExams() {
 
               <div id="text_hist01">
                 <div>
-                  Exames Realizados
+                  Bem-vindo,
                 </div>
+                <button className="buttonPower">
+                  <img
+                    id="power"
+                    src={power}
+                    alt="Desligar"
+                  />
+                </button>
               </div>
 
               <div id="divbuttonconsulta">
+                <input className="inputFilter" type="text" name="Filtro" placeholder="Filtrar dados..." />
                 <button className="buttonConsultar">
-                  Consultar
+                  <img
+                    id="pesquisa"
+                    src={pesquisa}
+                    alt="incoPesquisa"
+                  />
                   {/* <a href=""></a> */}
                 </button>
               </div>
@@ -62,103 +73,26 @@ export function ListExams() {
                 <div className="text02">
                   Exame(s)
                 </div>
-              
-                <div className="text03">
-                  
-                  <button type="button" id="button01">
-                    <img
-                      id="um"
-                      src={um}
-                      alt="icon1"
-                      height="11"
-                      width="25"
-                    />
-                  </button>
-                  <button type="button" id="button01">
-                    <img
-                      id="dois"
-                      src={dois}
-                      alt="icon2"
-                      height="11"
-                      width="25"
-                    />
-                  </button>
 
-                  <div id="numberPgE">
-                    <input className="PgE"
-                      type="number"
-                      name="number"
-                    >
-                    </input>
+                <div className="examList">
+                  <div id="examData">
+                    <p className="patientName">Nome:</p><br />
+                    <p>N°</p>
+                    <p>00/00/0000</p>
+                    <p>TIPO DE EXAME</p>
                   </div>
-
-                  <button type="button" id="button01">
-                    <img
-                      id="quatro"
-                      src={quatro}
-                      alt="icon4"
-                      height="11"
-                      width="25"
-                    />
-                  </button>
-                  <button type="button" id="button01">
-                    <img
-                      id="cinco"
-                      src={cinco}
-                      alt="icon5"
-                      height="11"
-                      width="25"
-                    />
-                  </button>
-
-                </div>
-                
-                <div className="caixaEx">
-                  <div id="caix1">
-                    Código
-                    <input type="text" name="text">
-                    </input>
-                  </div>
-                  <div id="caix2">
-                    Cod.Atendimento
-                    <input type="text" name="text">
-                    </input>
-                  </div>
-                  <div id="caix3">
-                    Código Laudo
-                    <input type="text" name="text">
-                    </input>
-                  </div>
-                  <div id="caix4">
-                    Código Pedido
-                    <input type="text" name="text">
-                    </input>
-                  </div>
-                  <div id="caix5">
-                    Código Laudo
-                    <input type="text" name="text">
-                    </input>
-                  </div>
-                  <div id="caix6">
-                    Exame
-                    <input type="text" name="text">
-                    </input>
-                  </div>
-                  <div id="caix7">
-                    PDF
-                    <input type="text" name="text">
-                    </input>
+                  <div id="PDF">
+                    <button className="buttonPDF">
+                      <img
+                        id="pdf_icon"
+                        src={pdf}
+                        alt="incoPDF"
+                      />
+                    </button>
                   </div>
                 </div>
-                
-
               </div>
-
-              
-              
-
             </div>
-
           </div>
         </div>
       </ContainerExam>
