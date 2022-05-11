@@ -16,50 +16,71 @@ export const ContainerExam = styled.div`
     margin: auto;
     height: 100%;
     border-radius: 2px;
-    padding: 16px;  
+    padding: 10px;  
 
     #page_header {
-      width: 75%;
+      /* border: 1px solid #ff0000; */
+      width: 50%;
+      height: 80%;
       max-width: 80%;
+      margin-left: -2px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-  
+      
       /* font-size: 100%; */
       margin-top: 0px;
       border-radius: 2px;
     }
   }
-
+  
 
   #header_logo {
-    width: 60%;
+    /* border: 1px solid #ff0000; */
+    width: 90%;
   }
 
   #logo02 {
     /* margin-bottom: 1px; */
-    width: 70%;
-    margin-left: -2px;
+    /* border: 1px solid #ff0000; */
+    width: 90%;
+    margin-left: 5px;
     display: flex;
     margin-top: 1px;
     
   }
 
-  #text {
-    max-width: 80%;
-    width: 80%;
-    height: 80%;
-    margin-left: -0.2%;
-    align-items: -50px;
+  #textHeader {
+    /* border: 1px solid #ff0000; */
+    max-width: 90%;
+    max-height: 90%;
+    width: 78%;
+    padding-bottom: 0px;
+    margin-left: 5px;
+    /* align-items: -50px; */
     /* margin-right: -50%; */
-    margin-top: 15px;
-    font-size: 100%;
-    color: gray;
-    border-radius: 2px;
+    
+    .text01 {
+      /* border: 1px solid #cc6600; */
+      margin-top: 10px;
+      font-size: 2.4vw;
+      color: gray;
+      border-radius: 2px;
+      font-weight: bold;
+      padding-bottom: 2px;
+      width: 99%;
+      height: 1%;
+      margin-bottom: 0px;
+      max-width: 100%;
+      min-width: 90%;
+      justify-content: center;
+      /* font-size: clamp(1em, 1em + 1vw, 1.5em); */
+    }
 
   } 
 
   .navigation_header {
+    /* border: 1px solid #ff0000; */
     /* text-align: center; */
   }
 
@@ -82,45 +103,63 @@ export const ContainerExam = styled.div`
     display: flex;
   }
 
-  #hist {
+  #conteinerHist {
     background: #ffffff;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #e6e6e6;    
     width: 98%;
     margin: auto;
     display: flex;
-    height: 575px;
+    height: 70%;
     margin-top: 8px;
     border-radius: 3px;
     display: inline-block;
     /* color: gray; */
   }    
   
-  #text_hist01 {
+  #containerWelcome {
     /* border: 1px solid #ff0000; */
     background: var(--green);
-    border: 1px solid #e6e6e6;
+    color: #009985;
     width: 99%;
-    padding: 0.5%;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    height: 80px;
     font-size: 150%;
+    padding: 2vw;
+    height: 90px;
+    border-radius: 3px;
     margin-top: 4px;
     margin-left: 0.5%;
     float: left;
-    border-radius: 3px;
-    color: #009985;
-    font-weight: bold;
-
+    
+    /* justify-items: flex-start; */
+    
   }
+  #textAndButton {
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid #ff0000; */
+    font-weight: bold;
+    width: 70vw;
+    height: 35px;
+    margin-top: 4px;
+  }
+
+  #patientInformation {
+    /* border: 1px solid #FFFFFF; */
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    max-width: 87%;
+    margin-top: 4px;
+    
+  }
+
   .buttonPower {
+    /* border: 1px solid #ff0000; */
     background: var(--green);
-    border-color: var(--green);
     border: none;
-    width: 25px;
-    height: 25px;
-    margin-left: 70%;
+    margin-top: -15px;
+    width: 28px;
+    height: 28px;
+    margin-left: 72vw;
     position: absolute;
     display: flex;
     
@@ -128,12 +167,13 @@ export const ContainerExam = styled.div`
       display: flex;
       width: 25px;
       height: 25px;
+      margin: 1px;
       background: var(--green);
     }
   }
 
   .inputFilter {
-    width: 40%;
+    width: 35vw;
     height: 40px;
     text-align: 50px;
     border: 2.5px solid var(--green);
@@ -144,13 +184,13 @@ export const ContainerExam = styled.div`
     padding: 9px;
   }
 
-  #divbuttonconsulta {
+  #divbuttonconsulta {    
     background: #ffffff;
     width: 96%;
     display: flex;
     align-items: center;
     padding: 1px;
-    margin-top: 40px;
+    margin-top: 87px;
     margin-left: 2%;
     border-top: 3px solid #f1f1f1;
     border-bottom: 3px solid #f1f1f1;   
@@ -184,13 +224,12 @@ export const ContainerExam = styled.div`
     background: #ffffff;
     width: 96%;
     display: flex;
-    flex-direction: column;
-    /* width: 750px; */
     height: 490px;
     margin: 0 auto;
     margin-top: 5px;
     margin-left: 2%;
     border-radius: 2px;
+    flex-direction: column;
   }
   
   .text02 {
@@ -217,34 +256,37 @@ export const ContainerExam = styled.div`
 
   #text_hist03 {
     width: 96%;
-    display: flex;
+    display: block;
     margin: 0 auto;
     margin-left: 2%;
     border-radius: 2px;
+
   }
 
   .examList {
     background: #f1f1f1;
     /* border: 1px solid #e6e6e6; */
-    border: 1px solid #ff0000;
+    /* border: 1px solid #ff0000; */
     width: 100%;
+    height: 25%;
     margin: 0 auto;
     top: 0;
-    align-items: center;
-    height: 30%;
     margin-top: 10px;
+    align-items: center;
     text-align: center;
     color: gray;
     font-size: 19px;
+    justify-content: space-between;
     
     display: flex;    
+        
     border-radius: 5px;
     
     #examData {
-      border: 1px solid #ff0000;
+      /* border: 1px solid #ff0000; */
       width: 70%;
       height: 80%;
-      margin-left: 12px;
+      margin-left: 20px;
       font-size: 80%;
       color: gray;
       text-align: left;
@@ -262,19 +304,24 @@ export const ContainerExam = styled.div`
       display: flex;
       margin-left: 10%;
       display: flex;
+      /* flex-direction: row-reverse; */
+      justify-content: flex-end;
       /* position: absolute; */
       /* max-width: 10%; */
       
       .buttonPDF {
         float:right;
         max-width: 20%;
-        border: 1px solid #ff0000;
+        /* border: 1px solid #ff0000; */
+        border: none;
         width: 80px;
         height: 80px;
-        margin-top: 0px;
+        margin-top: 20px;
         position: absolute;
         /* position: relative; */
         display: flex;
+        border-radius: 5px;
+        /* flex-direction: row-reverse; */
 
         #pdf_icon {
           width: 99%;
