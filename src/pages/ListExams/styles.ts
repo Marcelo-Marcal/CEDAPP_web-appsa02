@@ -44,7 +44,7 @@ export const ContainerExam = styled.div`
     /* margin-bottom: 1px; */
     /* border: 1px solid #ff0000; */
     width: 90%;
-    margin-left: 1px;
+    margin-left: 5px;
     display: flex;
     margin-top: 1px;
     
@@ -56,7 +56,7 @@ export const ContainerExam = styled.div`
     max-height: 90%;
     width: 78%;
     padding-bottom: 0px;
-    margin-left: -2px;
+    margin-left: 5px;
     /* align-items: -50px; */
     /* margin-right: -50%; */
     
@@ -116,29 +116,47 @@ export const ContainerExam = styled.div`
     /* color: gray; */
   }    
   
-  #text_hist01 {
+  #containerWelcome {
     /* border: 1px solid #ff0000; */
     background: var(--green);
-    width: 85vw;
-    padding: 2vw;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    height: 80px;
+    color: #009985;
+    width: 99%;
     font-size: 150%;
+    padding: 2vw;
+    height: 90px;
+    border-radius: 3px;
     margin-top: 4px;
     margin-left: 0.5%;
     float: left;
-    border-radius: 3px;
-    color: #009985;
-    font-weight: bold;
-    justify-content: space-between;
-
+    
+    /* justify-items: flex-start; */
+    
   }
+  #textAndButton {
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid #ff0000; */
+    font-weight: bold;
+    width: 70vw;
+    height: 35px;
+    margin-top: 4px;
+  }
+
+  #patientInformation {
+    /* border: 1px solid #FFFFFF; */
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    max-width: 87%;
+    margin-top: 4px;
+    
+  }
+
   .buttonPower {
     /* border: 1px solid #ff0000; */
     background: var(--green);
     border: none;
+    margin-top: -15px;
     width: 28px;
     height: 28px;
     margin-left: 72vw;
@@ -248,7 +266,7 @@ export const ContainerExam = styled.div`
   .examList {
     background: #f1f1f1;
     /* border: 1px solid #e6e6e6; */
-    border: 1px solid #ff0000;
+    /* border: 1px solid #ff0000; */
     width: 100%;
     height: 25%;
     margin: 0 auto;

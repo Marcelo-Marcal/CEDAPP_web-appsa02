@@ -6,7 +6,6 @@ export function Header() {
     <Container>
       <Content>
         <img src={logoImg} alt="Logo CEDAPP" />
-        {/* <div img src={logoImg} alt="Logo CEDAPP"></div> */}
         
       </Content>      
     </Container>

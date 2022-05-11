@@ -41,20 +41,30 @@ export function ListExams() {
           <div id="line" ></div>
 
           <div id="containerLint02">
-
             <div id="conteinerHist">
+              <div id="containerWelcome">
 
-              <div id="text_hist01">
-                <div>
-                  Bem-vindo,
+                <div id="textAndButton">
+                  <div>
+                    Bem-vindo,
+                    <button className="buttonPower">
+                      <img
+                        id="power"
+                        src={power}
+                        alt="Desligar"
+                      />
+                    </button>
+                  </div>                  
                 </div>
-                <button className="buttonPower">
-                  <img
-                    id="power"
-                    src={power}
-                    alt="Desligar"
-                  />
-                </button>
+                
+                <div id="patientInformation">
+                  <div>
+                    NOME DO PACIENTE
+                  </div>
+                  {/* <div>                    
+                  </div> */}
+                </div>
+
               </div>
 
               <div id="divbuttonconsulta">
