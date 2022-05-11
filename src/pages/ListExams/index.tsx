@@ -23,17 +23,17 @@ export function ListExams() {
                 />
               </div>                
 
-              <nav className="navigation_header">
+              {/* <nav className="navigation_header">
                 <ul>
                 </ul>
-              </nav>
+              </nav> */}
             </header>
 
-            <div id="text">
-              <strong>
+            <div id="textHeader">
+              <div className="text01">
                 SisLab - Sistema de Gerenciamento Laboratorial <br />
                 CEDAPP - Centro de Diagnostico Anatomopatológico
-              </strong>
+              </div>
             </div>
             
           </div>
@@ -42,7 +42,7 @@ export function ListExams() {
 
           <div id="containerLint02">
 
-            <div id="hist">
+            <div id="conteinerHist">
 
               <div id="text_hist01">
                 <div>
