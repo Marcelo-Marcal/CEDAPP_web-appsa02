@@ -53,7 +53,7 @@ export function Login() {
             placeholder={valuePlaceHolder1} 
             onChange={handleChangeMask} 
             value={valor}
-            ref={register=number()}
+            ref={register()}
           />
         </div>
         <div className="pw">
