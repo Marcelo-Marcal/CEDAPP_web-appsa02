@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Container } from "./styles";
 import { mask } from "../../util/format";
+import { useForm } from "react-hook-form"
+
 
 export function Login() {
    
   const [valuePlaceHolder1, setValuePlaceHolder1] = useState<string>('CRM');
   const [valuePlaceHolder2, setValuePlaceHolder2] = useState<string>('CPF');
+
+  const { register, handleSubmit, errors } = useForm()
+  function onSubmit(data) {
+    console.log('Data submitted: ', data)    
+  }
 
   const [valor, setValor] = useState('')
 
@@ -17,7 +24,7 @@ export function Login() {
 
   return (
     <Container>      
-     <form>
+     <form onSubmit={handleSubmit(onSubmit)}>
         <p>Faça seu login</p>
         <div className="medical_access">
           <input className="radio1" type="radio" id="access1" name="radio" value="CRM" v-model="checked"
@@ -40,17 +47,34 @@ export function Login() {
 
         <div className="login">
           <label htmlFor="input"></label>
-          <input type="number" name="Login" placeholder={valuePlaceHolder1} onChange={handleChangeMask} value={valor}/>
+          <input 
+            type="number" 
+            name="Login" 
+            placeholder={valuePlaceHolder1} 
+            onChange={handleChangeMask} 
+            value={valor}
+            ref={register()}
+          />
         </div>
         <div className="pw">
           <label htmlFor="input"></label>
-          <input type="password" name="Senha" placeholder={valuePlaceHolder2} />{" "}
+          <input 
+            type="password" 
+            name="Senha" 
+            placeholder={valuePlaceHolder2} 
+            ref={register()}
+          />{" "}
         </div>
 
-        <input type="submit" name="ação" value="Entrar" />
+        <input onClick={()} type="submit" name="ação" value="Entrar" />
 
         <div className="line" ></div>
       </form>
+      <footer>
+        
+      </footer>
     </Container>
   );
 }
+
+// export const Input = forwardRef()

@@ -8,9 +8,9 @@ export const Content = styled.div`
   max-width: 1120px;
   margin: auto;
   text-align : center;
-  /* display: flex; */
   align-items: center;
   justify-content: space-between;
+  /* display: flex; */
 
 `;
 
