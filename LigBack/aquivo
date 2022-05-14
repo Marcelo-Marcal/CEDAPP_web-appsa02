@@ -1,0 +1,102 @@
+http://vpn.hnsn.com.br:8283/
+
+http://138.185.33.188:3333/
+
+const response = await apiLaureano.post("/session", {
+  login,
+  password: loginMedico ? password.replace(/\D/gim, "") : password,
+  isMedico: loginMedico,
+});
+
+_________________________________________
+
+const loadData = useCallback(async () => {
+  showLoader();
+  var listFinalLaudos: LaudoExame[] = [];
+
+  if (usuarioLaureano) {
+    if (!usuarioLaureano.cdPrestadorArray) {
+      const { data } = await apiLaureano.get("/paciente");
+      listFinalLaudos.push(...data.slice(0, 200));
+
+      setIsPaciente(true);
+    } else {
+    const { data } = await apiLaureano.get(
+      `/medico/${usuarioLaureano.cdPrestadorArray}`
+    );
+    listFinalLaudos.push(...data.slice(0, 200));
+    }
+  }
+
+  if (usuarioHnsn) {
+    if (!usuarioHnsn.cdPrestadorArray) {
+      const { data } = await apiHnsn.get("/paciente");
+
+      listFinalLaudos.push(...data.slice(0, 200));
+
+      setIsPaciente(true);
+    } else {
+      const { data } = await apiHnsn.get(
+        `/medico/${usuarioHnsn.cdPrestadorArray}`
+      );
+
+      listFinalLaudos.push(...data.slice(0, 200));
+    }
+  }
+
+  listFinalLaudos = listFinalLaudos.sort((a: LaudoExame, b: LaudoExame) => {
+    var datePart1 = a.dtLaudo.split("/");
+    var datePart2 = b.dtLaudo.split("/");
+    return (
+    new Date(+datePart2[2], +datePart2[1] - 1, +datePart2[0]).getTime() -
+    new Date(+datePart1[2], +datePart1[1] - 1, +datePart1[0]).getTime()
+  );
+});
+
+__________________________________________
+
+`http://138.185.33.188:3333/laudo/${cdLaudo}`
+
+http://vpn.hnsn.com.br:8283/laudo/hnsn/${cdLaudo}
+
+async function handleBuscarDados() {
+  showLoader();
+
+  Keyboard.dismiss();
+  var listFinalLaudos: LaudoExame[] = [];
+  if (usuarioLaureano) {
+    if (usuarioLaureano.cdPrestadorArray) {
+      const { data } = await apiLaureano.get(
+        `/medico/${
+        usuarioLaureano.cdPrestadorArray
+    }?filtro=${filtro?.toUpperCase()}`
+    );
+    listFinalLaudos.push(...data.slice(0, 200));
+    }
+  }
+
+  if (usuarioHnsn) {
+    if (usuarioHnsn.cdPrestadorArray) {
+      const { data } = await apiHnsn.get(
+        `/medico/${
+          usuarioHnsn.cdPrestadorArray
+        }?filtro=${filtro?.toUpperCase()}`
+      );
+
+      listFinalLaudos.push(...data.slice(0, 200));
+    }
+  }
+
+  listFinalLaudos = listFinalLaudos.sort((a: LaudoExame, b: LaudoExame) => {
+    var datePart1 = a.dtLaudo.split("/");
+    var datePart2 = b.dtLaudo.split("/");
+    return (
+      new Date(+datePart2[2], +datePart2[1] - 1, +datePart2[0]).getTime() -
+      new Date(+datePart1[2], +datePart1[1] - 1, +datePart1[0]).getTime()
+    );
+  });
+
+  setLaudos(listFinalLaudos);
+
+  hideLoader();
+}
