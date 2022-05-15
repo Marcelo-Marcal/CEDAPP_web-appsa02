@@ -47,7 +47,7 @@ export const Container = styled.div`
   }
 
   form input[type="number"],
-  form input[type="password"] {
+  form input[type="text"] {
     width: 100%;
     height: 100%;
     text-align: 50px;
