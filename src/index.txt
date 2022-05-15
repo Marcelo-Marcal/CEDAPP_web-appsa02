@@ -1,0 +1,18 @@
+fetch
+axios
+
+capitura informações do input ( useState )
+
+verifica se as informações estão corretas 
+
+fazer a chamada API 
+
+## Chamadas API 
+
+quando voc~e usa api rest tem um padrão
+post = enviar coisas pro backend
+get= trazer coisas do backend
+put = modificar coisas no Backend
+delete = deletar coisas do backend
+você pode pesquisar no youtube por consumo de api no react e colocar um desses metodos
+exemplo: consumo de api no react metodo post
