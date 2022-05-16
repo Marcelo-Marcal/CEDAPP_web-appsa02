@@ -16,3 +16,10 @@ put = modificar coisas no Backend
 delete = deletar coisas do backend
 você pode pesquisar no youtube por consumo de api no react e colocar um desses metodos
 exemplo: consumo de api no react metodo post
+
+
+numa API REST quase sempre os dados vem em formato JSON, quando os dados vem, geralmente estão dentro de (response.data), para usar qualquer dado lá de dentro basta salvar o response.data em uma constante pra facilitar
+
+const data = response.data;
+
+dai eu uso: data.token; por exemplo, posso salvar esse token e usar mais pra fente.
