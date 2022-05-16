@@ -1,44 +1,54 @@
+import axios from "axios";
 import { useState } from "react";
-import { Container } from "./styles";
-import { mask } from "../../util/format";
-import { useForm } from "react-hook-form";
 import { api } from "../../serveles";
+import { Container } from "./styles";
+// import { mask } from "../../util/format";
+// import { useForm } from "react-hook-form";
+// import { api } from "../../serveles";
 
+type PropsUser ={
+  cpf: string,
+  crm: string
+}
 
 export function Login() {
 
   const [valuePlaceHolder, setValuePlaceHolder] = useState(false);
 
-  const [cpf, setCpf] = useState('')
-
-  // const { register, handleSubmit, errors } = useForm()
-  // function onSubmit(data) {
-  //   console.log('Data submitted: ', data)
-  // }
-
-  const [valor, setValor] = useState('')
-
-  function handleChangeMask(event: any) {
-    const { value } = event.target
-
-    setValor(mask(value))
-}
-
-const handleInput = (e: any) => setCpf( e.target.value )
-const handleSubmit = (event: any) => {
-  event.preventDefault()
-  const response = api.post("/session", {
-    
-    password: valuePlaceHolder ? cpf: " ",
-    isMedico: valuePlaceHolder,
-  
+  const [user, setUser] = useState<PropsUser>({
+    cpf: "",
+    crm: ""
   });
-  console.log(response)
+
+const handleInputCpf = (e: any) => {
+    setUser({
+      ...user,
+      cpf: e.currentTarget.value,
+    });
+}
+const handleInputCrm = (e: any) => {
+  setUser({
+    ...user,
+    crm: e.currentTarget.value,
+  });
+}
+// console.log({user})
+
+const handleSubmit =  (event: any) => {
+  event.preventDefault()
+  axios.post(valuePlaceHolder ? "http://138.185.33.188:3333/session" : "http://vpn.hnsn.com.br:8283/session",{
+    password: user.cpf,
+    isMedico: user.crm,
+    headers: {'Content-Type': 'application/json'}
+  }).then(response=>{
+    console.log(response.data);
+  })
 }
 
-  return (
+
+return (
     <Container>
-     <form onSubmit={handleSubmit}>
+     <form>
         <p>Faça seu login</p>
         <div className="medical_access">
           <input className="radio1" type="radio" id="access1" name="radio" value="CRM" v-model="checked"
@@ -63,10 +73,10 @@ const handleSubmit = (event: any) => {
           <label htmlFor="input"></label>
           <input
             type="number"
-            name="Login"
+            name="crm"
             placeholder={valuePlaceHolder? "CRM": "CPF"}
-            onChange={handleChangeMask}
-            value={valor}
+            onChange={handleInputCrm}
+            value={user.crm}
             // ref={register()}
           />
         </div>
@@ -74,14 +84,15 @@ const handleSubmit = (event: any) => {
           <label htmlFor="input"></label>
           <input
             type="text"
-            name="Senha"
+            name="cpf"
             placeholder={valuePlaceHolder? "CPF": "Data de nascimento"}
-            onChange={handleInput}
+            onChange={handleInputCpf}
+            value={user.cpf}
             // ref={register()}
           />{" "}
         </div>
 
-        <input type="submit" name="ação" value="Entrar" />
+        <button  onClick={handleSubmit} name="ação" value="Entrar" >Entrar</button>
 
         <div className="line" ></div>
       </form>

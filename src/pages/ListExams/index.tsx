@@ -3,8 +3,10 @@ import logo03 from "../../assets/logo03.png";
 import pesquisa from "../../icon/pesquisa.png";
 import power from "../../icon/power.png";
 import pdf from "../../icon/pdf_icon.png";
+import { useState } from "react";
 
 export function ListExams() {
+  const [logado, setLogado] = useState(true);
 
   return (
     <>
@@ -59,7 +61,7 @@ export function ListExams() {
                 
                 <div id="patientInformation">
                   <div>
-                    NOME DO PACIENTE
+                   {logado? "Ezequias" : "Nome do paciente"}
                   </div>
                   {/* <div>                    
                   </div> */}

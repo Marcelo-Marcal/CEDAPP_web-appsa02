@@ -61,7 +61,7 @@ export const Container = styled.div`
     max-width: 100%;
   }
 
-  form input[type="submit"] {
+  form button {
     display: flex;
     padding: 0 103px;
     height: 40px;
