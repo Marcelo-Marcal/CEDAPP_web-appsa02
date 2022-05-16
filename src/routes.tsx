@@ -7,16 +7,16 @@ import { Login } from "./pages/Login";
 export default function Routes() {
   return (
     <Router>      
-        <Switch>          
-          <Route exact path="/" >
-            <div className="content">
-              <Header />
-              <Login />        
-            </div>
-          </Route>
-          <Route path="/dashboard">
-            <ListExams />
-          </Route>
+        <Switch>    
+            <Route exact path="/" >
+              <div className="content">
+                <Header />
+                <Login />        
+              </div>
+            </Route>
+            <Route path="/dashboard">
+              <ListExams />
+            </Route>  
         </Switch>
     </Router>
   );
