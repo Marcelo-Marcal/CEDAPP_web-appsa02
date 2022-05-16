@@ -1,15 +1,19 @@
-import axios from "axios";
 import { useState } from "react";
-import { api } from "../../serveles";
 import { Container } from "./styles";
+import { useContext } from "react";
+import { AuthContext } from "../../auth";
+import { Link } from "react-router-dom";
 // import { mask } from "../../util/format";
 // import { useForm } from "react-hook-form";
 // import { api } from "../../serveles";
 
 type PropsUser ={
   cpf: string,
-  crm: string
+  crm: string,
+  isDoctor: boolean
 }
+
+
 
 export function Login() {
 
@@ -17,35 +21,28 @@ export function Login() {
 
   const [user, setUser] = useState<PropsUser>({
     cpf: "",
-    crm: ""
+    crm: "",
+    isDoctor: true
   });
-
-const handleInputCpf = (e: any) => {
+  const { signIn } = useContext(AuthContext);
+const handleInputCrm = (e: any) => {
     setUser({
       ...user,
-      cpf: e.currentTarget.value,
+      crm: e.currentTarget.value,
     });
 }
-const handleInputCrm = (e: any) => {
+const handleInputCpf = (e: any) => {
   setUser({
     ...user,
-    crm: e.currentTarget.value,
+    cpf: e.currentTarget.value,
   });
 }
-// console.log({user})
+
 
 const handleSubmit =  (event: any) => {
   event.preventDefault()
-  axios.post(valuePlaceHolder ? "http://138.185.33.188:3333/session" : "http://vpn.hnsn.com.br:8283/session",{
-    password: user.cpf,
-    isMedico: user.crm,
-    headers: {'Content-Type': 'application/json'}
-  }).then(response=>{
-    console.log(response.data);
-  })
+  signIn(user)
 }
-
-
 return (
     <Container>
      <form>
@@ -54,7 +51,6 @@ return (
           <input className="radio1" type="radio" id="access1" name="radio" value="CRM" v-model="checked"
             onChange={() => {
               setValuePlaceHolder(!valuePlaceHolder)
-              
             }}
           />
           <label className="medical" htmlFor="medical"> Acesso médico </ label>
@@ -91,13 +87,13 @@ return (
             // ref={register()}
           />{" "}
         </div>
-
-        <button  onClick={handleSubmit} name="ação" value="Entrar" >Entrar</button>
+        <a href="/dashboard">
+          <button  onClick={handleSubmit} name="ação" value="Entrar" >Entrar</button>
+        </a>
 
         <div className="line" ></div>
       </form>
       <footer>
-
       </footer>
     </Container>
   );
