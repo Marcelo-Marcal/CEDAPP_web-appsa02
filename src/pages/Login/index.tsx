@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Container } from "./styles";
 import { useContext } from "react";
 import { AuthContext } from "../../auth";
-import { Link } from "react-router-dom";
 // import { mask } from "../../util/format";
 // import { useForm } from "react-hook-form";
 // import { api } from "../../serveles";
@@ -24,7 +23,8 @@ export function Login() {
     crm: "",
     isDoctor: true
   });
-  const { signIn } = useContext(AuthContext);
+  const { signIn, data } = useContext(AuthContext);
+  console.log(data);
 const handleInputCrm = (e: any) => {
     setUser({
       ...user,
@@ -87,9 +87,8 @@ return (
             // ref={register()}
           />{" "}
         </div>
-        <a href="/dashboard">
-          <button  onClick={handleSubmit} name="ação" value="Entrar" >Entrar</button>
-        </a>
+
+        <button  onClick={handleSubmit} name="ação" value="Entrar" >Entrar</button>
 
         <div className="line" ></div>
       </form>
