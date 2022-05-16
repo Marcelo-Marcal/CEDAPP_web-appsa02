@@ -20,8 +20,6 @@ type FuncitonSinInData ={
 export const AuthContext = createContext({} as AuthContextType)
 
 
-
-
 export function AuthProvider({ children }: any) {
   const [data, setData] = useState<SinInData | null>(null);
 
