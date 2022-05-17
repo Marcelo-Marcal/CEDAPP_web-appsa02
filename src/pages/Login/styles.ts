@@ -9,7 +9,7 @@ export const Container = styled.div`
   box-sizing: border-box;
   margin-top: -20px;
 
-  form {
+  .form {
     background: var(--caixaLogin);
     border: 0.5px solid #f2f2f2;
     color: #333333;
@@ -46,8 +46,8 @@ export const Container = styled.div`
     }
   }
 
-  form input[type="number"],
-  form input[type="text"] {
+  .form input[type="number"],
+  .form input[type="text"] {
     width: 100%;
     height: 100%;
     text-align: 50px;
@@ -61,7 +61,7 @@ export const Container = styled.div`
     max-width: 100%;
   }
 
-  form button {
+  .form button {
     display: flex;
     padding: 0 103px;
     height: 40px;

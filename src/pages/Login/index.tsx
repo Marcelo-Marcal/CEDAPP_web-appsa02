@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Container } from "./styles";
-import { useContext } from "react";
-import { AuthContext } from "../../auth";
+import axios from "axios";
+import { ListExams } from "../ListExams";
+import { Link } from "react-router-dom";
 // import { mask } from "../../util/format";
 // import { useForm } from "react-hook-form";
 // import { api } from "../../serveles";
@@ -12,19 +13,26 @@ type PropsUser ={
   isDoctor: boolean
 }
 
-
+type Data={
+  token: string,
+  user:{
+    crm: string,
+    cpf: string,
+    nome: string,
+    dtNascimento: string,
+  }
+}
 
 export function Login() {
 
   const [valuePlaceHolder, setValuePlaceHolder] = useState(false);
+  const [data, setData] = useState<Data >();
 
   const [user, setUser] = useState<PropsUser>({
     cpf: "",
     crm: "",
     isDoctor: true
   });
-  const { signIn, data } = useContext(AuthContext);
-  console.log(data);
 const handleInputCrm = (e: any) => {
     setUser({
       ...user,
@@ -39,13 +47,19 @@ const handleInputCpf = (e: any) => {
 }
 
 
-const handleSubmit =  (event: any) => {
-  event.preventDefault()
-  signIn(user)
+const handleSubmit = async () => {
+  axios.post("http://vpn.hnsn.com.br:8283/session",{
+    login: user.crm,
+    password: user.cpf,
+    isMedico: user.isDoctor
+  }).then(async (res)=>{
+    await setData(res.data);
+    console.log(data)
+  })
 }
 return (
     <Container>
-     <form>
+     <div className="form">
         <p>Faça seu login</p>
         <div className="medical_access">
           <input className="radio1" type="radio" id="access1" name="radio" value="CRM" v-model="checked"
@@ -87,12 +101,17 @@ return (
             // ref={register()}
           />{" "}
         </div>
-
-        <button  onClick={handleSubmit} name="ação" value="Entrar" >Entrar</button>
-
+            <button onClick={handleSubmit}>
+              <Link to={"/dashboard"}>
+                Entrar
+              </Link>
+            </button>
         <div className="line" ></div>
-      </form>
+      </div>
       <footer>
+        <div style={{display: 'none'}}>
+            <ListExams data={data}/>
+        </div>
       </footer>
     </Container>
   );
